@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<objects>
+<!-- ('', 'zport', 'dmd', 'Services', 'IpService', 'Privileged', 'serviceclasses', 'ftp') -->
+<object id='/zport/dmd/Services/IpService/Privileged/serviceclasses/ftp' module='Products.ZenModel.IpServiceClass' class='IpServiceClass'>
+<property id='zendoc' type='string'>
+File Transfer [Control]
+</property>
+<property type="string" id="name" mode="w" >
+ftp
+</property>
+<property type="lines" id="serviceKeys" mode="w" >
+('ftp', 'tcp_00021', 'udp_00021')
+</property>
+<property type="text" id="description" mode="w" >
+File Transfer [Control]
+</property>
+<property type="int" id="port" mode="w" >
+21
+</property>
+<property visible="True" type="int" id="zFailSeverity" >
+3
+</property>
+<tomany id='instances'>
+<link objid='/zport/dmd/Devices/Server/Linux/devices/pig.ourshack.com/os/ipservices/tcp_00021'/>
+<link objid='/zport/dmd/Devices/Server/Windows/Snmp/2 Processors/devices/win2003net.class.example.org/os/ipservices/tcp_00021'/>
+<link objid='/zport/dmd/Devices/Server/Linux/devices/zen42.class.example.org/os/ipservices/tcp_00021'/>
+<link objid='/zport/dmd/Devices/Server/Linux/devices/zenny.skills-1st.co.uk/os/ipservices/ftp'/>
+</tomany>
+</object>
+</objects>
